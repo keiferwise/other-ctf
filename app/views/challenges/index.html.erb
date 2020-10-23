@@ -1,0 +1,18 @@
+<h1>Challenges<h1>
+
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+    <th></th>
+  </tr>
+ 
+  <% @challenges.each do |chal| %>
+    <tr>
+      <td><%= chal.title %></td>
+      <td><%= chal.point_value %></td>
+      <td><%= link_to 'Show', challenge_path(chal) %></td>
+    </tr>
+  <% end %>
+</table>>

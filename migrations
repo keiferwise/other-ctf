@@ -1,0 +1,1 @@
+rails generate migration AddDetailsToHelpResources name:string content:text
