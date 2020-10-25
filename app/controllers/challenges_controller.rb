@@ -10,11 +10,13 @@ class ChallengesController < ApplicationController
     @challenge = Challenge.find(params[:id])
   end
   #
-  def manage_challenges
+  def manage
+    require_staff
     @challenges = Challenge.all
   end
   #
-  def manage_challenge
+  def edit
+    require_staff
     @challenge = Challenge.find(params[:id])
   end
   #
@@ -36,6 +38,7 @@ class ChallengesController < ApplicationController
   def create
     require_staff
     @challenge = Challenge.new(challenge_params)
+    @challenge.contest_id = (Contest.find_by active: true).id
     if @challenge.save 
       redirect_to @challenge
     else
