@@ -14,12 +14,17 @@ Rails.application.routes.draw do
   get '/admin/teams' => 'teams#manage'
   get '/admin/teams/new' => 'teams#new'
   get '/admin/teams/:id' => 'teams#edit'
+  #admin users
+  get '/admin/users' => 'users#manage'
+  get '/admin/users/new' => 'users#new'
+  get '/admin/users/:id' => 'users#edit'
+  #resources
   resources :articles
   resources :users
   resource :user_session
-  resources :users, only: [:new, :create]
-  resources :challenges, only: [:index, :show, :create, :update, :edit ]
-  resources :teams, only: [:index,:show]
+  resources :users,       only: [:index, :show, :create, :new, :update, :edit]
+  resources :challenges,  only: [:index, :show, :create, :update, :edit]
+  resources :teams,       only: [:index, :show, :create, :update, :edit]
   delete '/sign_out', to: 'user_sessions#destroy', as: :sign_out
   get '/sign_in', to: 'user_sessions#new', as: :sign_in
 end

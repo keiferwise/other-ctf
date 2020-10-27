@@ -1,0 +1,16 @@
+<h2>Users</h2>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>score</th>
+    <th></th>
+  </tr>
+ 
+  <% @users.each do |user| %>
+    <tr>
+      <td><%= user.title %></td>
+      <td><%= user.score %></td>
+      <td><%= link_to 'Show', user_path(user) %></td>
+    </tr>
+  <% end %>
+</table>>

@@ -1,0 +1,16 @@
+ <div class="well well-lg">
+    <ul>
+      <li><%= @user.first_name %></li>
+      <li><%= @user.last_name %></li>
+      <li><%= @user.login %></li>
+      <li><%= @user.email %></li>
+      <li>Login count: <%= @user.login_count %></li>
+      <li>Failed login count: <%= @user.failed_login_count %></li>
+      <li>Last request: <%= @user.last_request_at %></li>
+      <li>Current login at: <%= @user.current_login_at %></li>
+      <li>Last login at: <%= @user.last_login_at %></li>
+      <li>Current login IP: <%= @user.current_login_ip %></li>
+      <li>Last login IP: <%= @user.last_login_ip %></li>
+      <li><%= link_to 'Sign Out', @user, method: :delete %></li>
+    </ul>
+  </div>

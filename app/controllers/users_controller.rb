@@ -1,9 +1,17 @@
 class UsersController < ApplicationController
+  #
   def new
+    require_staff
     @user = User.new
   end
-
+  #
+  def index
+    require_user
+    @users = User.all
+  end
+  #
   def create
+    require_staff
     @user = User.new(users_params)
     if @user.save
       flash[:success] = "Account registered!"
@@ -11,6 +19,31 @@ class UsersController < ApplicationController
     else
       render :new
     end
+  end
+  #
+  def update
+    require_staff
+    @user = User.find(params[:id])
+    if @user.update(users_params)
+      redirect_to @users_params
+    else
+      render 'update_team'
+    end
+  end
+  #
+  def manage
+    require_staff
+    @users = User.all
+  end
+  #
+  def edit
+    require_staff
+    @user = User.find(params[:id])
+  end
+  #
+  def show
+    require_user
+    @user = User.find(params[:id])
   end
 
   private

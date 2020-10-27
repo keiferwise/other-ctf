@@ -2,12 +2,12 @@ class TeamsController < ApplicationController
   #
   def index
     require_user
-    @teams = Teams.all
+    @teams = Team.all
   end
   #
   def show
     require_user
-    @team = team.find(params[:id])
+    @team = Team.find(params[:id])
   end
   #
   def new
@@ -27,8 +27,7 @@ class TeamsController < ApplicationController
   #
   def manage
     require_staff
-    @teams = Teams.all
-
+    @teams = Team.all
   end
   #
   def edit
