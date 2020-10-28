@@ -1,7 +1,6 @@
 class UsersController < ApplicationController
   #
   def new
-    require_staff
     @user = User.new
   end
   #
@@ -11,7 +10,6 @@ class UsersController < ApplicationController
   end
   #
   def create
-    require_staff
     @user = User.new(users_params)
     if @user.save
       flash[:success] = "Account registered!"

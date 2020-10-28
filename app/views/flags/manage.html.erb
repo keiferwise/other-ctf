@@ -1,0 +1,17 @@
+<h2>Flags</h2>
+<table>
+  <tr>
+    <th>challenge ID</th>
+    <th>flag ID</th>
+    <th></th>        
+    <th></th>
+    <th></th>
+  </tr>
+  <% @flags.each do |flag| %>
+    <tr>
+      <td><%= flag.challenge_id %></td>
+      <td><%= flag.id%></td>
+      <td><%= link_to 'edit', edit_flag_path(flag) %></td>
+    </tr>
+  <% end %>
+</table>>

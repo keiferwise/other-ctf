@@ -15,6 +15,11 @@ class TeamsController < ApplicationController
     @team = Team.new
   end
   #
+  def manage
+    require_staff
+    @teams = Team.all
+  end
+  #
   def update
     require_staff
     @team = Team.find(params[:id])
@@ -25,10 +30,7 @@ class TeamsController < ApplicationController
     end
   end
   #
-  def manage
-    require_staff
-    @teams = Team.all
-  end
+
   #
   def edit
     require_staff

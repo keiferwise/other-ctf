@@ -1,0 +1,25 @@
+<%= form_with model: @flag, local: true do |form| %>
+  <% if @flag.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@flag.errors.count, "error") %> prohibited
+        this flag from being saved:
+      </h2>
+      <ul>
+        <% @flag.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+ 
+  <p>
+    <%= form.label :answer %><br>
+    <%= form.text_field :answer %>
+  </p>
+  
+  <p>
+    <%= form.submit %>
+  </p>
+ 
+<% end %>
