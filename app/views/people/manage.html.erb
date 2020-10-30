@@ -1,0 +1,14 @@
+<h2>People<h2>
+<table >
+  <tr>
+    <th>First</th>
+    <th>Last</th>
+    <th></th>
+  </tr>
+  <% @people.each do |person| %>
+    <tr>
+      <td><%= person.first_name %></td>
+      <td><%= link_to 'edit', edit_person_path(person) %></td>
+    </tr>
+  <% end %>
+</table>>
