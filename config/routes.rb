@@ -9,22 +9,24 @@ Rails.application.routes.draw do
   #admin challenges
   get '/admin/challenges'     =>'challenges#manage'
   get '/admin/challenges/new' => 'challenges#new'
-  get '/admin/challenges/:id' => 'challenges#edit'  
   #admin teams
   get '/admin/teams'      => 'teams#manage'
   get '/admin/teams/new'  => 'teams#new'
-  #get '/admin/teams/:id'  => 'teams#edit'
   #admin users
   get '/admin/users'      => 'users#manage'
   get '/admin/users/new'  => 'users#new'
-  #get '/admin/users/:id'  => 'users#edit'
   #admin flags
   get '/admin/flags'      => 'flags#manage'
   get '/admin/flags/new'  => 'flags#new'
-  #get '/admin/flags/:id'  => 'flags#edit'
+  #admin sponsors
+  get '/admin/sponsors'   => 'sponsors#manage'
+  get '/admin/sponsors'   => 'sponsors#new'
+  #admin people
+  get '/admin/people'     => 'people#manage'
+  get '/admin/people/new' => 'people#new'
+
   #resources
   resources :articles
-  resources :users
   resource :user_session
   resources :users,       only: [:index, :show, :create, :update, :edit]
   resources :challenges,  only: [:index, :show, :create, :update, :edit]

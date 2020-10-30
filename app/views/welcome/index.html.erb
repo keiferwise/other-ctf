@@ -13,6 +13,7 @@
   <h2>Some info about you...</h2>
   <% if current_user.admin == true%>
     <p>you are an admin</p>
+    <%= link_to 'administration', '/admin'%>
   <% end %>
 
   <div class="well well-lg">
