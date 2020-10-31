@@ -24,7 +24,6 @@ Rails.application.routes.draw do
   #admin people
   get '/admin/people'     => 'people#manage'
   get '/admin/people/new' => 'people#new'
-
   #resources
   resources :articles
   resource :user_session
