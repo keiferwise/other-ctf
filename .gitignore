@@ -37,3 +37,6 @@ yarn-debug.log*
 
 # Ignore database.yml for development on different systems
 /config/database.yml
+
+# Ignore mac .DS_store filesystem thing
+.DS_Store

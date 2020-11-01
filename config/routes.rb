@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   get '/admin/flags/new'  => 'flags#new'
   #admin sponsors
   get '/admin/sponsors'   => 'sponsors#manage'
-  get '/admin/sponsors'   => 'sponsors#new'
+  get '/admin/sponsors/new'   => 'sponsors#new'
   #admin people
   get '/admin/people'     => 'people#manage'
   get '/admin/people/new' => 'people#new'
