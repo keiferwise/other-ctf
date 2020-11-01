@@ -1,16 +1,23 @@
 <h2>Users</h2>
 <table>
   <tr>
-    <th>Title</th>
-    <th>score</th>
+    <th>First</th>
+    <th>Last</th>
+    <th>Login</th>
+    <th>Email</th>
+    <th>Score</th>
     <th></th>
   </tr>
  
   <% @users.each do |user| %>
     <tr>
-      <td><%= user.title %></td>
-      <td><%= user.score %></td>
-      <td><%= link_to 'Show', user_path(user) %></td>
+      <td><%= user.first_name %></td>
+      <td><%= user.last_name %></td>
+      <td><%= user.login %></td>
+      <td><%= user.email %></td>
+      <%# should users have a score field? %>
+      <td>doesnt exist</td>
+      <td><%= link_to 'Show', user %></td>
     </tr>
   <% end %>
-</table>>
+</table>

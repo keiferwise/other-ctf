@@ -23,7 +23,7 @@ class UsersController < ApplicationController
     require_staff
     @user = User.find(params[:id])
     if @user.update(users_params)
-      redirect_to @users_params
+      redirect_to @user
     else
       render 'update_team'
     end
@@ -47,7 +47,7 @@ class UsersController < ApplicationController
   private
 
   def users_params
-    params.require(:user).permit(:email, :login, :password, :password_confirmation,:firstname,:lastname)
+    params.require(:user).permit(:email, :login, :password, :password_confirmation,:first_name,:last_name)
   end
 end
 
