@@ -7,12 +7,12 @@ An admin(?) creates a ctf. The ctf contains teams,challenges,(etc). Each challen
 - Create challenges
 - Create + Manage teams of players(?)
 - (etc)
-##Team Features
+## Team Features:
 - Hide team(s)
-##Sponsor Features
+## Sponsor Features:
 - sponsor list ( should look nice)
 - Sponsor Detail pages
-##Challenge Features
+## Challenge Features:
 - Hint Button
 - Description
 - sponsored challenge
