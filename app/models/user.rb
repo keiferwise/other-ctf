@@ -23,6 +23,7 @@ class User < ApplicationRecord
       case_sensitive: false,
       if: :will_save_change_to_login?
     }
+  
 
   validates :password,
     confirmation: { if: :require_password? },
@@ -36,4 +37,13 @@ class User < ApplicationRecord
       minimum: 8,
       if: :require_password?
       }
-    end
+      
+  validates :first_name,
+    length: { within: 1..100},
+    allow_blank: true
+
+  validates :last_name,
+    length: { within: 1..100},
+    allow_blank: true
+
+end
