@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_25_174037) do
+ActiveRecord::Schema.define(version: 2020_11_03_024352) do
 
   create_table "articles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "title"
@@ -52,6 +52,15 @@ ActiveRecord::Schema.define(version: 2020_10_25_174037) do
     t.string "answer"
     t.bigint "challenge_id", null: false
     t.index ["challenge_id"], name: "index_flags_on_challenge_id"
+  end
+
+  create_table "hints", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "challenge_id", null: false
+    t.bigint "team_id", null: false
+    t.index ["challenge_id"], name: "index_hints_on_challenge_id"
+    t.index ["team_id"], name: "index_hints_on_team_id"
   end
 
   create_table "people", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
@@ -136,6 +145,8 @@ ActiveRecord::Schema.define(version: 2020_10_25_174037) do
 
   add_foreign_key "challenges", "contests"
   add_foreign_key "flags", "challenges"
+  add_foreign_key "hints", "challenges"
+  add_foreign_key "hints", "teams"
   add_foreign_key "people", "contests"
   add_foreign_key "solves", "challenges"
   add_foreign_key "solves", "teams"
