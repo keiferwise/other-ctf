@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   root 'welcome#index'
   #admin
   get '/admin' => 'admin#index'
+  #admin users
+  get '/admin/users/new' => 'users#new'
   #admin articles
   get  '/admin/articles' => 'articles#manage'
   #admin challenges
