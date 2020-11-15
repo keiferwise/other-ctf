@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get '/admin/challenges/new' => 'challenges#new'
   #challenges 
   post '/challenges/:id/submit',to: 'challenges#submit_flag', as: 'submit'
+  get '/challenges/:id/hint', to:'challenges#get_hint', as: 'hint'
   #admin teams
   get '/admin/teams'      => 'teams#manage'
   get '/admin/teams/new'  => 'teams#new'

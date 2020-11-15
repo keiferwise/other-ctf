@@ -8,11 +8,17 @@
 <p><%= @challenge.connection_string %></p>
 <p><%= @challenge.id %></p>
 
-  <% if flash[:success] %>
-    <div class="notice"><%= flash[:success] %></div>
+<% if flash[:success] %>
+  <div class="notice"><%= flash[:success] %></div>
+<% end %>
+<% if @hint == true %>
+  <p>the hint is: <%= @challenge.hint %> </p>
+<% else %>
+  <%= form_with url: hint_path, method: "get", local: true do |form| %>
+    <%= form.submit %>
   <% end %>
-
-<%= form_with url: submit_path do |form| %>
+<%end %>  
+<%= form_with url: submit_path, local: true do |form| %>
   <%= form.text_field :submitted_flag %>
   <%= form.submit %>
 <% end %>

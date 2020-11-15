@@ -6,8 +6,15 @@ class ChallengesController < ApplicationController
   end
   #
   def show
-    require_user
     @challenge = Challenge.find(params[:id])
+    require_user
+    hinted = Hint.find_by(team_id: current_user.team_id, challenge_id: @challenge.id)
+    @hint = false
+    if hinted == nil
+      @hint = false
+    else
+      @hint = true
+    end
   end
   #
   def manage
@@ -58,7 +65,7 @@ class ChallengesController < ApplicationController
     flags = Flag.where(challenge_id: @challenge.id)
     hint = Hint.find_by(challenge_id: @challenge.id, team_id: team.id)
     solve = Solve.find_by(challenge_id: @challenge.id, team_id: team.id)
-
+    new_score = team.score
     flag_correct = false
     # check i f the submitted flag mateches one of the flags with the challenge ID
     flags.each do |flag|
@@ -77,36 +84,54 @@ class ChallengesController < ApplicationController
       if solve == nil
         # check hints to see i f this team has used the hint fo r this challenge
         # I f all these are passed, create solve entry
-
+        Solve.create(team_id:team.id, challenge_id:@challenge.id)
         if hint == nil
           #i f no don't subtract penalty
           new_score = team.score + @challenge.point_value
-          p "full reward given"
+          p "full reward given" 
+          p @challenge.point_value
         else  
           #i f yes, subtract penalty
+          p team.score
           new_score = team.score + @challenge.point_value - @challenge.penalty
+          p @challenge.point_value
+          p @challenge.penalty
           p "penalty applyed to award"
         end
-        p @new_score
-        team.update(score: @new_score)
+        p new_score
+        team.update(score: new_score)
+      else
+        flash.now[:success] = "Challenge already solved"
+        p "already solved"
 
       end
-      flash.now[:success] = "Challenge already solved"
-      p "already solved"
-
+      
     end
     # return them to the challenge page with some kind of congratuatory message    
     redirect_to @challenge
   end
   # Get Hint
   def get_hint
+    require_participant
+    team = Team.find(current_user.team_id)
+    @challenge = Challenge.find(params[:id])
     # check if the team already got the hint
+    hint = Hint.find_by(challenge_id: @challenge.id, team_id: team.id)
+    solve = Solve.find_by(challenge_id: @challenge.id, team_id: team.id)
+    if hint == nil && solve == nil
+      Hint.create(team_id: team.id, challenge_id: @challenge.id)
+    else
+      #nothing
+    end
+    
+
       #if they have, redirect to challenge page (could be caused by two team memeber pressing around the same time)
     # check if the challenge is solved
       # redirect back to challenge
     # If these two are passed
       # create hint entry
       # redirect back with hint now revealed
+      redirect_to @challenge
   end
   #
   private
