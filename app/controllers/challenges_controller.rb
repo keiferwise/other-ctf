@@ -108,7 +108,6 @@ class ChallengesController < ApplicationController
       # create hint entry
       # redirect back with hint now revealed
   end
-
   #
   private
   def challenge_params
