@@ -47,22 +47,56 @@ class ChallengesController < ApplicationController
   end
   #Submit answer
   def submit_flag
+    require_participant
+    team = Team.find(current_user.team_id)
+    p team.id
+    p team.score
+    @challenge = Challenge.find(params[:id])
+    p @challenge.id
+    p @challenge.point_value
+    p params[:submitted_flag]
+    flags = Flag.where(challenge_id: @challenge.id)
+    hint = Hint.find_by(challenge_id: @challenge.id, team_id: team.id)
+    solve = Solve.find_by(challenge_id: @challenge.id, team_id: team.id)
 
-    # Check if the team has already solved the challenge
+    flag_correct = false
+    # check i f the submitted flag mateches one of the flags with the challenge ID
+    flags.each do |flag|
+      p flag.answer
+      if(params[:submitted_flag] == flag.answer)
+        flag_correct = true
+        flash.now[:success] = "Challenge Solved"
+        p "flag accepted"
+      else
+        p "flag incorrect"
+      end
+    end
+    
+    if flag_correct
+      # Check i f the team has already solved the challenge
+      if solve == nil
+        # check hints to see i f this team has used the hint fo r this challenge
+        # I f all these are passed, create solve entry
 
-    # check if the submitted flag mateches one of the flags with the challenge ID
+        if hint == nil
+          #i f no don't subtract penalty
+          new_score = team.score + @challenge.point_value
+          p "full reward given"
+        else  
+          #i f yes, subtract penalty
+          new_score = team.score + @challenge.point_value - @challenge.penalty
+          p "penalty applyed to award"
+        end
+        p @new_score
+        team.update(score: @new_score)
 
-    # If all these are passed, create solve entry
+      end
+      flash.now[:success] = "Challenge already solved"
+      p "already solved"
 
-    # check hints to see if this team has used the hint for this challenge
-      #if yes, subtract penalty
-      #if no don't subtract penalty
-
-    # add points to their score
-
-    # return them to the challenge page with some kind of congratuatory message
-
-    # else (if one of the checks fails) return the user
+    end
+    # return them to the challenge page with some kind of congratuatory message    
+    redirect_to @challenge
   end
   # Get Hint
   def get_hint
@@ -74,6 +108,7 @@ class ChallengesController < ApplicationController
       # create hint entry
       # redirect back with hint now revealed
   end
+
   #
   private
   def challenge_params

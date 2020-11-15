@@ -81,5 +81,10 @@ Article.create(
   title: "how to SQL",
   text: 'use a union or something'
 )
+Solve.create(
+  id: 6969,
+  team_id: 45,
+  challenge_id: 424 
+)
 
 

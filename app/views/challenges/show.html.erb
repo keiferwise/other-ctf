@@ -1,3 +1,5 @@
+
+
 <h1><%= @challenge.title %></h1>
 
 <p><%= @challenge.description %></p>
@@ -5,3 +7,13 @@
 <p><%= @challenge.link %></p>
 <p><%= @challenge.connection_string %></p>
 <p><%= @challenge.id %></p>
+
+  <% if flash[:success] %>
+    <div class="notice"><%= flash[:success] %></div>
+  <% end %>
+
+<%= form_with url: submit_path do |form| %>
+  <%= form.text_field :submitted_flag %>
+  <%= form.submit %>
+<% end %>
+
