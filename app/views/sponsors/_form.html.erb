@@ -1,0 +1,41 @@
+<%= form_with model: @sponsor, local: true do |form| %>
+ 
+  <% if @sponsor.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@sponsor.errors.count, "error") %> prohibited
+        this sponsor from being saved:
+      </h2>
+      <ul>
+        <% @sponsor.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+ 
+  <p>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+  </p>
+ 
+  <p>
+    <%= form.label :slogan %><br>
+    <%= form.text_area :slogan %>
+  </p>
+
+  <p>
+    <%= form.label :about %><br>
+    <%= form.number_field :about, step:1 %>
+  </p>
+
+  <p>
+    <%= form.label :link %><br>
+    <%= form.text_area :link %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+ 
+<% end %>
