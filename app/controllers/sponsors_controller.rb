@@ -1,18 +1,25 @@
 class SponsorsController < ApplicationController
-    def index
-        @sponsors = Sponsor.all 
-    end
-    def show
-        @sponsor = Sponsor.find(params[:id])
-    end
-    def edit
-        require_staff
-        @person = Sponsor.find(params[:id])
-    end
+    #
     def new
         require_staff
         @sponsor = Sponsor.new
     end
+    #
+    def index
+        @sponsors = Sponsor.all 
+    end
+    #
+    def show
+        @sponsor = Sponsor.find(params[:id])
+    end
+    #
+    def edit
+        require_staff
+        @sponsor = Sponsor.find(params[:id])
+    end
+    #
+
+    #
     def create
         require_staff
         @sponsor = Sponsor.new(sponsor_params)
@@ -22,10 +29,12 @@ class SponsorsController < ApplicationController
           render 'new'
         end
     end
+    #
     def manage
         require_staff
         @sponsors = Sponsor.all
     end
+    #
     def update
         require_staff
         @sponsor = Sponsor.find(params[:id])
