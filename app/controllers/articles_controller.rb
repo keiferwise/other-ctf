@@ -16,6 +16,7 @@ class ArticlesController < ApplicationController
 
   def edit
     require_staff
+    @contest = current_contest
     @article = Article.find(params[:id])
   end
 
