@@ -1,11 +1,13 @@
 class TeamsController < ApplicationController
   #
   def index
+    @contest = current_contest
     require_user
     @teams = Team.all
   end
   #
   def show
+    @contest = current_contest
     require_user
     @team = Team.find(params[:id])
   end

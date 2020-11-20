@@ -26,11 +26,15 @@ class PeopleController < ApplicationController
   end
   #
   def show
+    @contest = current_contest
+
     #require_user
     @person = Person.find(params[:id])
   end
   #
   def index
+    @contest = current_contest
+
     #require_user
     @people = Person.all
   end

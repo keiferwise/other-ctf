@@ -1,11 +1,13 @@
 class ChallengesController < ApplicationController
   #
   def index
+    @contest = current_contest
     require_user
     @challenges = Challenge.all
   end
   #
   def show
+    @contest = current_contest
     @challenge = Challenge.find(params[:id])
     require_user
     hinted = Hint.find_by(team_id: current_user.team_id, challenge_id: @challenge.id)

@@ -26,11 +26,14 @@ class ArticlesController < ApplicationController
   end
 
   def show
+    @contest = current_contest
     #require_user
     @article = Article.find(params[:id])
   end
 
   def index
+    @contest = current_contest
+
     #require_user
     @articles = Article.all
   end

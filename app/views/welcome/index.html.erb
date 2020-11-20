@@ -1,4 +1,4 @@
-<h1>Laser Tag CTF</h1>
+<%= render 'header'%>
 
   <% if flash[:notice] %>
     <div class="notice"><%= flash[:notice] %></div>
@@ -7,6 +7,7 @@
 <p><%= link_to 'HELP', controller: 'articles' %></p>
 <p><%= link_to 'CHALLENGES', controller: 'challenges'%></p>
 <p><%= link_to 'SCOREBOARD', '/scoreboard'%></p>
+<p><%= link_to 'SPONSORS', controller: 'sponsors'%></p>
 <% if current_user %>
   <div class="page-header"><h1>Welcome back!</h1></div>
 

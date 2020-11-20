@@ -6,11 +6,15 @@ class SponsorsController < ApplicationController
     end
     #
     def index
-        @sponsors = Sponsor.all 
+      @contest = current_contest
+
+      @sponsors = Sponsor.all 
     end
     #
     def show
-        @sponsor = Sponsor.find(params[:id])
+      @contest = current_contest
+
+      @sponsor = Sponsor.find(params[:id])
     end
     #
     def edit

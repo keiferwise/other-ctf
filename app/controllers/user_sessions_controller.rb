@@ -1,5 +1,7 @@
 class UserSessionsController < ApplicationController
   def new
+    @contest = current_contest
+
     @user_session = UserSession.new
   end
 
