@@ -2,3 +2,48 @@ h1 {
   color: blue;
   font-family: Arial, Helvetica, sans-serif;
 }
+body {
+  background-color: white;
+}
+.header-right-containter {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+}
+.header-left-containter {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+}
+.side-bar-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  min-width: 180px;
+  width:180px;
+}
+.left-body-containter{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.footer-containter{
+  display: flex;
+}
+.container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+}
+.right-down-1{
+  background-color: coral;
+  border-radius: 100px 0 0 0;
+  height: 220px;
+  padding: 5px;
+}
+
