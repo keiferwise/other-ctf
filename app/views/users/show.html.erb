@@ -11,6 +11,6 @@
       <li>Last login at: <%= @user.last_login_at %></li>
       <li>Current login IP: <%= @user.current_login_ip %></li>
       <li>Last login IP: <%= @user.last_login_ip %></li>
-      <li><%= link_to 'Sign Out', @user, method: :delete %></li>
+      <li><%= link_to 'Sign Out', sign_out_path, method: :delete %></li>
     </ul>
   </div>

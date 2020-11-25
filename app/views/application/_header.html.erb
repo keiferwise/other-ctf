@@ -1,4 +1,4 @@
-<h1><%= @contest.title %></h1>
+<h1><%= Contest.find_by(active: 1).title %></h1>
 
 <div class="side-bar-container">
   <div class="right-down-1">Q</div>

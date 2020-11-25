@@ -1,34 +1,60 @@
 <%= form_for @user do |f| %>
-
-  <div class="form-group">
+<div class="form-group">
+  <div >
     <%= f.label :email %>
     <%= f.email_field :email, class: 'form-control' %>
   </div>
 
-  <div class="form-group">
+  <div >
     <%= f.label :username %>
     <%= f.text_field :login, class: 'form-control' %>
   </div>
 
-  <div class="form-group">
-    <%= f.label :password %>
-    <%= f.password_field :password, class: 'form-control' %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :password_confirmation %>
-    <%= f.password_field :password_confirmation, class: 'form-control' %>
-  </div>
-
-  <div class="form-group">
+  <div >
     <%= f.label :firstname %>
     <%= f.text_field :first_name, class: 'form-control' %>
   </div>
-
-    <div class="form-group">
+  <div >
     <%= f.label :lastname %>
     <%= f.text_field :last_name, class: 'form-control' %>
   </div>
-
+  <div >
+    <%= f.label :contest_id %>
+    <%= f.number_field :contest_id, class: 'form-control' %>
+  </div>
+    <div >
+    <%= f.label :team_id %>
+    <%= f.number_field :team_id , class: 'form-control'%>
+  </div>
+  <div >
+    <%= f.label :active %>
+    <%= f.check_box :active%>
+  <div>
+    <div >
+    <%= f.label :approved %>
+    <%= f.check_box :approved%>
+  <div>
+    <div >
+    <%= f.label :confirmed %>
+    <%= f.check_box :confirmed%>
+  <div>
+  <div >
+    <%= f.label :participant %>
+    <%= f.check_box :participant%>
+  <div>
+    <div >
+    <%= f.label :staff %>
+    <%= f.check_box :staff%>
+  <div>
+  <div >
+    <%= f.label :admin %>
+    <%= f.check_box :admin%>
+  <div>
+  <div >
+    <%= f.label :active %>
+    <%= f.check_box :active%>
+  <div>
+  
   <%= f.submit 'Register'%>
+  </div>
 <% end %>
