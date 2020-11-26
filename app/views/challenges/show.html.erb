@@ -13,11 +13,11 @@
   <p>the hint is: <%= @challenge.hint %> </p>
 <% else %>
   <%= form_with url: hint_path, method: "get", local: true do |form| %>
-    <%= form.submit %>
+    <%= form.button 'Get Hint' %>
   <% end %>
 <%end %>  
 <%= form_with url: submit_path, local: true do |form| %>
   <%= form.text_field :submitted_flag %>
-  <%= form.submit %>
+  <%= form.submit 'Submit Flag'%>
 <% end %>
 
