@@ -40,6 +40,7 @@ Rails.application.routes.draw do
   resources :flags,       only: [:index, :show, :create, :update, :edit]
   resources :sponsors,    only: [:index, :show, :create, :update, :edit]
   resources :people,      only: [:index, :show, :create, :update, :edit]
+  resources :password_resets, :only => [ :new, :create, :edit, :update ]
 
   delete '/sign_out', to: 'user_sessions#destroy', as: :sign_out
   get '/sign_in', to: 'user_sessions#new', as: :sign_in

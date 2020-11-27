@@ -43,9 +43,13 @@ class UsersController < ApplicationController
     require_user
     @user = User.find(params[:id])
   end
-
+  #
+  def deliver_password_reset_instructions!
+    reset_perishable_token!
+    Notifier.deliver_password_reset_instructions(self)
+  end
+  #
   private
-
   def users_params
     params.require(:user).permit(:email, :login, :password, :password_confirmation,:first_name,:last_name)
   end
