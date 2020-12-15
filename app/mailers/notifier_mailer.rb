@@ -1,4 +1,4 @@
-class Notifier < ActionMailer::Base
+class NotifierMailer < ActionMailer::Base
   def password_reset_instructions(user)
     subject      "Password Reset Instructions"
     from         "noreplay@domain.com"

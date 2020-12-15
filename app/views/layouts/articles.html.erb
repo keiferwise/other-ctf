@@ -11,6 +11,14 @@
 
   <body>
 <%= render 'header'%>
+<div class="page-mid">
+  <div class="mid-left-container">
+    <%= render 'sidebar'%>
+  </div>
+  <div class="mid-right-container">
     <%= yield %>
+  </div>
+</div>
+    
   </body>
 </html>
