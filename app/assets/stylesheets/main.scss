@@ -35,6 +35,7 @@ body {
   background-color: black;
   justify-content: flex-end;
   flex-direction: column;
+  margin-left:-3px;
 }
 .header-left-container {
   display: flex;
@@ -43,6 +44,8 @@ body {
   grid-column-end: 2;
   background-color: black;
   flex-direction: column;
+  margin-right:-3px;
+
 }
 .header-bottom-left-container {
   display: flex;
@@ -52,6 +55,8 @@ body {
   background-color: black;
   flex-direction: column;
   align-content: flex-end;
+  margin-right:-3px;
+
 }
 .header-bottom-right-container {
   display:flex;
@@ -60,6 +65,7 @@ body {
   background-color: black;
   justify-content: flex-start;
   flex-direction: column;
+  margin-left:-3px;
 }
 .header-bottom-container {
   display:grid;
@@ -67,7 +73,7 @@ body {
 }
 .page-mid{
   display:grid;
-  grid-template-columns: 350px auto;
+  grid-template-columns: 340px auto;
 }
 .mid-right-container {
   grid-column-start: 2;
