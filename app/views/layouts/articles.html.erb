@@ -10,15 +10,22 @@
   </head>
 
   <body>
-<%= render 'header'%>
-<div class="page-mid">
-  <div class="mid-left-container">
-    <%= render 'sidebar'%>
-  </div>
-  <div class="mid-right-container">
-    <%= yield %>
-  </div>
-</div>
+    <div>
+      <%= render 'header'%>
+    </div>
     
+    <div class='botm-half-cntr'> <!-- This contains everything below the header-->
+      <div><!-- This will be our sidebar-->
+        <%= render 'sidebar'%>
+      </div> 
+      <div> <!-- This contains both the botton of the header and the main content of the page-->
+        <div><!-- This will be our header bottom element-->
+        
+        </div> 
+        <div>
+          <%= yield %>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

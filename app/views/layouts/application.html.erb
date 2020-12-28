@@ -10,6 +10,23 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div>
+      <%= render 'header'%>
+    </div>
+
+    <div class='botm-half-cntr'> <!-- This contains everything below the header-->
+      <div><!-- This will be our sidebar-->
+        <%= render 'sidebar'%>
+      </div> 
+      <div class='bottom-right-cntr'> <!-- This contains both the botton of the header and the main content of the page-->
+        <div class='bottom-header-bar'><!-- This will be our header bottom element-->
+          <div class="bottom-right-bar"></div>
+                <div class="bottom-arch-bg"> <div class="bottom-arch"></div></div>
+        </div> <!-- This will contain the main content-->
+        <div class="page-content">
+          <%= yield %>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
