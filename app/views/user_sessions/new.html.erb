@@ -11,13 +11,13 @@
     </ul>
   </div>
   <% end %>
-  <%= f.label :login %><br />
-  <%= f.text_field :login %><br />
+  <%= f.label :login , class: "form-label" %><br />
+  <%= f.text_field :login, class: "form-field" %><br />
   <br />
   <%= f.label :password %><br />
-  <%= f.password_field :password %><br />
+  <%= f.password_field :password , class: "form-field"%><br />
   <br />
-  <%= f.label :remember_me %><br />
+  <%= f.label :remember_me , class: "form-label" %><br />
   <%= f.check_box :remember_me %><br />
   <br />
   <%= f.submit "Login", class:"form-button" %>

@@ -1,18 +1,18 @@
 <div class='side-bar-cntr'>
   <div class="bottom-left-1">
-    <%= link_to 'SCOREBOARD', 'scoreboard', class: 'side-bar-button-1' %>
-    <%= link_to 'CHALLENGES', 'challenges', class: 'side-bar-button-2' %>
-    <%= link_to 'HELP', 'articles', class: 'side-bar-button-2' %>
-    <%= link_to 'SPONSORS', 'sponsors', class: 'side-bar-button-2' %>
-    <%= link_to 'SIGN IN', sign_in_path, method: :get, class: 'side-bar-button-3' %>
-
-
-
-  
+    <%= link_to 'SCOREBOARD', '/scoreboard', class: 'side-bar-button-1' %>
+    <%= link_to 'CHALLENGES', '/challenges', class: 'side-bar-button-2' %>
+    <%= link_to 'HELP', '/articles', class: 'side-bar-button-2' %>
+    <%= link_to 'SPONSORS', '/sponsors', class: 'side-bar-button-2' %>
+    <%if current_user %>
+      <%= link_to 'SIGN OUT', sign_out_path, method: :delete, class: 'side-bar-button-3' %>
+    <% else %>
+      <%= link_to 'SIGN IN', sign_in_path, method: :get, class: 'side-bar-button-3' %>  
+    <%end%>
   </div>
   <div class="side-bar-block-1">
-
-  
+    <%= link_to 'SCOREBOARD', '/scoreboard', class: 'side-bar-button-1' %>
+    <%= link_to 'CHALLENGES', '/challenges', class: 'side-bar-button-3' %>
   </div>
   <div class="side-bar-block-2">    
   </div>

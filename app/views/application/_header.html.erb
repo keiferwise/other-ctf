@@ -1,15 +1,17 @@
 
 
 <div class="page-header">
-  <div class="header-left-container">TL
+  <div class="header-left-container">
     <div class="top-left-1"></div>
   </div>
   <div class="header-right-container">
-    <div class="page-title">
-      <%= Contest.find_by(active: 1).title %>
+    <div class="header-text-ctnr">
+      <div class="page-title">
+        <%= Contest.find_by(active: 1).title %>
+      </div>
+      <p> <%= Contest.find_by(active: 1).slogan %></p>
     </div>
-      <div class="top-arch-bg"> <div class="top-arch"></div></div>
-      
+    <div class="top-arch-bg"> <div class="top-arch"></div></div>
     <div class="top-right-bar">
     </div>
   </div>

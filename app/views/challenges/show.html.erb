@@ -1,22 +1,46 @@
-<h1><%= @challenge.title %></h1>
-<p><%= @challenge.description %></p>
-<p><%= @challenge.point_value %></p>
-<p><%= @challenge.link %></p>
-<p><%= @challenge.connection_string %></p>
-<p><%= @challenge.id %></p>
 
-<% if flash[:success] %>
-  <div class="notice"><%= flash[:success] %></div>
-<% end %>
-<% if @hint == true %>
-  <p>the hint is: <%= @challenge.hint %> </p>
-<% else %>
-  <%= form_with url: hint_path, method: "get", local: true do |form| %>
-    <%= form.button 'Get Hint' %>
-  <% end %>
-<%end %>  
-<%= form_with url: submit_path, local: true do |form| %>
-  <%= form.text_field :submitted_flag %>
-  <%= form.submit 'Submit Flag'%>
-<% end %>
+<div class="challenge">
+  <div class="challenge-title">
+    <div><%= @challenge.title %></div>
+  </div>
+  <div class="challenge-mid">
+    <div class="chal-horiz-bar"></div>
+    <div class="chal-left-arch-bg"><div class="chal-left-arch"></div></div>
+
+    <div class="challenge-content-cntr">
+      <div class="challenge-content">
+        <p><%= @challenge.description%></p>
+        <div class="challenge-label">POINTS</div>
+        <p><%= @challenge.point_value %></p>
+        <div class="challenge-label">URL</div>
+        <p><%= @challenge.link %></p>
+        <div class="challenge-label">CONNECTION STRING</div>
+        <p><%= @challenge.connection_string %></p>
+        <div class="challenge-label"> ID</div>
+        <p><%= @challenge.id %></p>
+        <% if flash[:success] %>
+          <div class="notice"><%= flash[:success] %></div>
+        <% end %>
+        
+        <div>
+        <%= form_with url: submit_path, local: true do |form| %>
+          <%= form.text_field :submitted_flag,class: "flag-form-field" %>
+          <%= form.submit 'SUBMIT FLAG', class:"submit-button"%>
+          </div>
+        <% end %>
+        <div style="height:30px"></div>  
+        <% if @hint == true %>
+          <p>the hint is: <%= @challenge.hint %> </p>
+        <% else %>
+          <%= form_with url: hint_path, method: "get", local: true do |form| %>
+            <%= form.button 'GET HINT', class:"hint-button" %>
+          <% end %>
+        <%end%>
+      </div>
+    </div>
+    <div class="chal-right-arch-bg"><div class="chal-right-arch"></div></div>
+    <div class="chal-horiz-bar"></div>
+  </div>
+  <div class="challenge-bottom"></div>
+</div>
 
