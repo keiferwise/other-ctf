@@ -30,8 +30,6 @@ a{
   text-decoration: none;
   font-weight: 700;
   font-stretch:narrower;
-
-
 }
 
 //Header: 
@@ -40,7 +38,8 @@ a{
   color:white;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 90px;
-  align-self: center;
+  align-self: end;
+  padding-right: 90px;
 }
 .page-header {
   display:grid;
@@ -166,6 +165,7 @@ a{
   color:white;
   font-family: Arial, Helvetica, sans-serif;
   height: 100%;
+  flex-direction: column;
 }
 
 
@@ -194,7 +194,7 @@ a{
   padding:150px 0px 20px 20px;
   background-color:#dd4444;
   border-radius: 100px 0 0 0;
-  height: 220px;
+  height: 400px;
   margin-bottom: 5px;
 }
 .side-bar-block-1{
@@ -238,4 +238,18 @@ a{
   border-radius: 0px 0px 0px 20px;
   border-top-width: 2px;
   padding: 5px;
+}
+
+//forms: 
+.login-form{
+  align-self: center;
+}
+.form-button{
+  background-color: blueviolet;
+  border-radius: 20px;
+  border-color: blueviolet;
+  border-style: solid;
+  height: 40px;
+  width: 130px;
+  color: black;
 }

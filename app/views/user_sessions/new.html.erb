@@ -1,4 +1,5 @@
-<%= render 'header'%>
+
+<div class="login-form">
 <%= form_for @user_session, url: user_session_url do |f| %>
   <% if @user_session.errors.any? %>
   <div id="error_explanation">
@@ -19,5 +20,6 @@
   <%= f.label :remember_me %><br />
   <%= f.check_box :remember_me %><br />
   <br />
-  <%= f.submit "Login" %>
+  <%= f.submit "Login", class:"form-button" %>
 <% end %>
+</div>
