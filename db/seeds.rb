@@ -6,7 +6,38 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-
+# This file should contain all the record creation needed to seed the database with its default values.
+# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
+#
+# Examples:
+#
+#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
+#   Character.create(name: 'Luke', movie: movies.first)
+Category.create(
+  id:4,
+  title:"CRYPTOGRAPHY",
+  description:"math and stuff"
+)
+Category.create(
+  id:2,
+  title:"WEB APPLICATION",
+  description:""
+)
+Category.create(
+  id:3,
+  title:"CLOUD",
+  description:""
+)
+Category.create(
+  id:1,
+  title:"TRIVIA",
+  description:""
+)
+Category.create(
+  id:5,
+  title:"REVERSE ENGENEERING",
+  description:""
+)
 Contest.create(
   title: 'My Great CTF', 
   organiser: "Keifer", 
@@ -41,7 +72,8 @@ Challenge.create(
   hint: 'asd123',
   link: 'google.com',
   connection_string: 'keiferwiseman@localhost:2023',
-  contest_id:222
+  contest_id:222,
+  category_id:1
 )
 Challenge.create(
   id:424,
@@ -51,7 +83,8 @@ Challenge.create(
   hint: 'qwer1234',
   link: 'google.com',
   connection_string: 'keiferwiseman@localhost:2023',
-  contest_id:222
+  contest_id:222,
+  category_id:2
 )
 Flag.create(
   id:7070,
@@ -88,3 +121,72 @@ Solve.create(
 )
 
 
+User.create!(
+  id:1,
+  email:"keiferdwiseman@gmail.com",
+  login:"wisemake",
+  password:"password123",
+  password_confirmation:"password123",
+  first_name:"kif",
+  last_name:"wis",
+  team_id:46,
+  contest_id:222,
+  active:1,
+  approved:1,
+  confirmed:1,
+  admin:1,
+  staff:1,
+  participant:1
+)
+
+User.create(
+  id:2,
+  email:"participant@mail.com",
+  login:"participant",
+  password:"password123",
+  password_confirmation:"password123",
+  first_name:"kif",
+  last_name:"wis",
+  team_id:46,
+  contest_id:222,
+  active:1,
+  approved:1,
+  confirmed:1,
+  admin:0,
+  staff:0,
+  participant:1
+)
+User.create(
+  id:3,
+  email:"staff@mail.com",
+  login:"staff",
+  password:"password123",
+  password_confirmation:"password123",
+  first_name:"kif",
+  last_name:"wis",
+  team_id:45,
+  contest_id:222,
+  active:1,
+  approved:1,
+  confirmed:1,
+  admin:0,
+  staff:1,
+  participant:1
+)
+User.create(
+  id:4,
+  email:"participant2@mail.com",
+  login:"participant2",
+  password:"password123",
+  password_confirmation:"password123",
+  first_name:"kif",
+  last_name:"wis",
+  team_id:45,
+  contest_id:222,
+  active:1,
+  approved:1,
+  confirmed:1,
+  admin:0,
+  staff:0,
+  participant:1
+)
