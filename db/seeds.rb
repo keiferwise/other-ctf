@@ -190,3 +190,49 @@ User.create(
   staff:0,
   participant:1
 )
+
+
+Challenge.create(
+  id:1,
+  title:'test chal 2',
+  description:'this is a challenge answer is qwe123',
+  point_value: 30,
+  hint: 'qwer1234',
+  link: 'google.com',
+  connection_string: 'keiferwiseman@localhost:2023',
+  contest_id:222,
+  category_id:2
+)
+Challenge.create(
+  id:2,
+  title:'test chal 2',
+  description:'this is a challenge answer is qwe123',
+  point_value: 30,
+  hint: 'qwer1234',
+  link: 'google.com',
+  connection_string: 'keiferwiseman@localhost:2023',
+  contest_id:222,
+  category_id:2
+)
+Challenge.create(
+  id:3,
+  title:'test chal 2',
+  description:'this is a challenge answer is qwe123',
+  point_value: 30,
+  hint: 'qwer1234',
+  link: 'google.com',
+  connection_string: 'keiferwiseman@localhost:2023',
+  contest_id:222,
+  category_id:2
+)
+Challenge.create(
+  id:4,
+  title:'test chal 2',
+  description:'this is a challenge answer is qwe123',
+  point_value: 30,
+  hint: 'qwer1234',
+  link: 'google.com',
+  connection_string: 'keiferwiseman@localhost:2023',
+  contest_id:222,
+  category_id:2
+)

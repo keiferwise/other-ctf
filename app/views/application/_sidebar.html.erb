@@ -11,6 +11,11 @@
     <%end%>
   </div>
   <div class="side-bar-block-1">
+    <% if current_user%>
+      <%if current_user.admin == true %>
+        <%= link_to 'ADMIN', '/admin', class: 'side-bar-button-1' %>
+      <%end%>
+    <% end %>
   </div>
   <div class="side-bar-block-2">    
   </div>

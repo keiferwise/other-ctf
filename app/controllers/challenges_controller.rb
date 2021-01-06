@@ -3,6 +3,7 @@ class ChallengesController < ApplicationController
   def index
     @contest = current_contest
     require_user
+    @categories = Category.all
     @challenges = Challenge.all
   end
   #

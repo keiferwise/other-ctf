@@ -1,19 +1,40 @@
 
-<h1>Challenges</h1>
-
-
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Text</th>
-    <th></th>
-  </tr>
- 
-  <% @challenges.each do |chal| %>
-    <tr>
-      <td><%= chal.title %></td>
-      <td><%= chal.point_value %></td>
-      <td><%= link_to 'Show', challenge_path(chal) %></td>
-    </tr>
+<div class="challenges-cntr">
+  <% @categories.each do |cat| %>
+  <div class="category">
+    <div class="chals-cat-header">
+      <div class="chals-cat-header-top-left"></div>
+      <div class="chals-header-text"> <%= cat.title %> </div>
+      <div class="chals-cat-header-top-right"></div>
+    </div>
+    <div class="category-mid">
+      <div class="chal-cat-horiz-bar"></div>
+      <div class="chal-cat-left-arch-bg"><div class="chal-cat-left-arch"></div></div>
+      <div class=challenge-content-cntr>
+        <table>
+          <% @challenges.each do |chal| %>
+          <%if cat.id == chal.category_id%>
+            <tr>
+              <td class="table-text"><%= chal.title %></td>
+              <td><%= chal.point_value %></td>
+              <td><%= link_to 'VIEW', challenge_path(chal),class:"table-button-right" %></td>
+              <td>
+                <% if Solve.find_by(team_id: current_user.team_id ,challenge_id:chal.id) %>
+                  <div class="complete"></div>
+                <% else %>
+                  <div class="incomplete"></div>
+                <% end %> 
+              </td>
+              <td><%=chal.id%></td>
+            </tr>
+            <%end%>
+          <% end %>
+        </table>
+      </div>
+      <div class="chal-cat-right-arch-bg"><div class="chal-cat-right-arch"></div></div>
+      <div class="chal-cat-horiz-bar"></div>
+    </div>
+    <div class="challenge-bottom"></div>
+  </div>
   <% end %>
-</table>
+</div>
