@@ -1,3 +1,5 @@
+
+
 @mixin button-1 {
   text-decoration: none;
   font-weight: 700;
@@ -48,21 +50,60 @@ a{
   font-weight: 700;
   color: black;
 }
+.table-cntr{
+  display: flex;
+  flex-direction: row;
+
+}
 table{
   border: none;
-  padding: 3px;
+  //padding: 30px;
+  border-style: none;
   font-size: large;
 }
 th{
   @include font-header;
   text-align: start;
   height:25px;
+  color:black;
+  padding:15px 75px 15px 45px;
+  background-color: #7788ff;
+}
+.th-left-cap{
+  height: 50px;
+  width:40px;
+  border-radius: 50% 0% 0% 50%;
+  background-color: #7788ff;
+  border-right: 2px solid black;
 }
 td{
   @include font-header;
   padding: 10px;
-  height:25px;
+  //height:25px;
+  //padding:15px 75px 15px 45px;
 }
+.tab{
+  display:table;
+}
+.tab-head{
+  display:table-row;
+  background-color: #7788ff;
+  font-weight: bold;
+  height:50px;
+  color:black;
+
+}
+.tab-row{
+  display: table-row;
+  padding:10px;
+}
+.tab-cell{
+  display:table-cell;
+  padding:10px;
+  border-right: 2px solid black;
+  border-left: 2px solid black;
+}
+
 .white-text{
   color:white;
 }
@@ -279,6 +320,16 @@ td{
   height: 100%;
   flex-direction: column;
   align-items: center;
+}
+.chals-page-content{
+  display:flex;
+  background-color: black;
+  padding:30px;
+  color:white;
+  @include font-header;
+  height: 100%;
+  flex-direction: row;
+  height:50%
 }
 
 
@@ -512,9 +563,10 @@ td{
 //challengeS
 .challenges-cntr{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
-  justify-content: space-around;
+  height:100%;
+  justify-content: normal;
 }
 .category{
   display:flex;
@@ -617,3 +669,4 @@ td{
   background-color: black;
   margin: 40px 40px 10px 10px;
 }
+

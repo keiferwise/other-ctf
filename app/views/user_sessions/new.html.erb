@@ -1,4 +1,4 @@
-
+<div class="page-content">
 <div class="login-form">
 <%= form_for @user_session, url: user_session_url do |f| %>
   <% if @user_session.errors.any? %>
@@ -22,4 +22,5 @@
   <br />
   <%= f.submit "Login", class:"form-button" %>
 <% end %>
+</div>
 </div>

@@ -1,15 +1,17 @@
-<h2>Sponsors</h2>
-<table>
-  <tr>
-    <th>Company</th>
-    <th>Last</th>
-    <th></th>
-  </tr>
-  <% @sponsors.each do |sponsor| %>
+<div class="page-content">
+  <h2>Sponsors</h2>
+  <table>
     <tr>
-      <td><%= sponsor.title %></td>
-      <td><%= sponsor.slogan %></td>
-      <td><%= link_to 'EDIT', edit_sponsor_path(sponsor) %></td>
+      <th>Company</th>
+      <th>Last</th>
+      <th></th>
     </tr>
-  <% end %>
-</table>
+    <% @sponsors.each do |sponsor| %>
+      <tr>
+        <td><%= sponsor.title %></td>
+        <td><%= sponsor.slogan %></td>
+        <td><%= link_to 'EDIT', edit_sponsor_path(sponsor) %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>

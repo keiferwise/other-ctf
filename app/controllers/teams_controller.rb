@@ -3,7 +3,7 @@ class TeamsController < ApplicationController
   def index
     @contest = current_contest
     require_user
-    @teams = Team.all
+    @teams = Team.all.order(score: :desc)
   end
   #
   def show

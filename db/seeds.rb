@@ -236,3 +236,404 @@ Challenge.create(
   contest_id:222,
   category_id:2
 )
+Challenge.create(
+  id:10,
+  title:'test chal 2',
+  description:'this is a challenge answer is qwe123',
+  point_value: 30,
+  hint: 'qwer1234',
+  link: 'google.com',
+  connection_string: 'keiferwiseman@localhost:2023',
+  contest_id:222,
+  category_id:1
+)
+Challenge.create(
+  id:11,
+  title:'test chal 2',
+  description:'this is a challenge answer is qwe123',
+  point_value: 30,
+  hint: 'qwer1234',
+  link: 'google.com',
+  connection_string: 'keiferwiseman@localhost:2023',
+  contest_id:222,
+  category_id:1
+)
+Challenge.create(
+  id:12,
+  title:'test chal 2',
+  description:'this is a challenge answer is qwe123',
+  point_value: 30,
+  hint: 'qwer1234',
+  link: 'google.com',
+  connection_string: 'keiferwiseman@localhost:2023',
+  contest_id:222,
+  category_id:3
+)
+Challenge.create(
+  id:13,
+  title:'test chal 2',
+  description:'this is a challenge answer is qwe123',
+  point_value: 30,
+  hint: 'qwer1234',
+  link: 'google.com',
+  connection_string: 'keiferwiseman@localhost:2023',
+  contest_id:222,
+  category_id:3
+)
+Challenge.create(
+  id:14,
+  title:'test chal 2',
+  description:'this is a challenge answer is qwe123',
+  point_value: 30,
+  hint: 'qwer1234',
+  link: 'google.com',
+  connection_string: 'keiferwiseman@localhost:2023',
+  contest_id:222,
+  category_id:3
+)
+Challenge.create(
+  id:15,
+  title:'test chal 2',
+  description:'this is a challenge answer is qwe123',
+  point_value: 30,
+  hint: 'qwer1234',
+  link: 'google.com',
+  connection_string: 'keiferwiseman@localhost:2023',
+  contest_id:222,
+  category_id:5
+)
+Challenge.create(
+  id:16,
+  title:'test chal 2',
+  description:'this is a challenge answer is qwe123',
+  point_value: 30,
+  hint: 'qwer1234',
+  link: 'google.com',
+  connection_string: 'keiferwiseman@localhost:2023',
+  contest_id:222,
+  category_id:5
+)
+Challenge.create(
+  id:17,
+  title:'test chal 2',
+  description:'this is a challenge answer is qwe123',
+  point_value: 30,
+  hint: 'qwer1234',
+  link: 'google.com',
+  connection_string: 'keiferwiseman@localhost:2023',
+  contest_id:222,
+  category_id:5
+)
+Challenge.create(
+  id:20,
+  title:'test chal 2',
+  description:'this is a challenge answer is qwe123',
+  point_value: 30,
+  hint: 'qwer1234',
+  link: 'google.com',
+  connection_string: 'keiferwiseman@localhost:2023',
+  contest_id:222,
+  category_id:4
+)
+Challenge.create(
+  id:21,
+  title:'test chal 2',
+  description:'this is a challenge answer is qwe123',
+  point_value: 30,
+  hint: 'qwer1234',
+  link: 'google.com',
+  connection_string: 'keiferwiseman@localhost:2023',
+  contest_id:222,
+  category_id:4
+)
+Challenge.create(
+  id:22,
+  title:'test chal 2',
+  description:'this is a challenge answer is qwe123',
+  point_value: 30,
+  hint: 'qwer1234',
+  link: 'google.com',
+  connection_string: 'keiferwiseman@localhost:2023',
+  contest_id:222,
+  category_id:4
+)
+Challenge.create(
+  id:23,
+  title:'test chal 2',
+  description:'this is a challenge answer is qwe123',
+  point_value: 30,
+  hint: 'qwer1234',
+  link: 'google.com',
+  connection_string: 'keiferwiseman@localhost:2023',
+  contest_id:222,
+  category_id:4
+)
+Challenge.create(
+  id:24,
+  title:'test chal 2',
+  description:'this is a challenge answer is qwe123',
+  point_value: 30,
+  hint: 'qwer1234',
+  link: 'google.com',
+  connection_string: 'keiferwiseman@localhost:2023',
+  contest_id:222,
+  category_id:4
+)
+Challenge.create(
+  id:25,
+  title:'test chal 2',
+  description:'this is a challenge answer is qwe123',
+  point_value: 30,
+  hint: 'qwer1234',
+  link: 'google.com',
+  connection_string: 'keiferwiseman@localhost:2023',
+  contest_id:222,
+  category_id:4
+)
+Challenge.create(
+  id:26,
+  title:'test chal 2',
+  description:'this is a challenge answer is qwe123',
+  point_value: 30,
+  hint: 'qwer1234',
+  link: 'google.com',
+  connection_string: 'keiferwiseman@localhost:2023',
+  contest_id:222,
+  category_id:4
+)
+Challenge.create(
+  id:27,
+  title:'test chal 2',
+  description:'this is a challenge answer is qwe123',
+  point_value: 30,
+  hint: 'qwer1234',
+  link: 'google.com',
+  connection_string: 'keiferwiseman@localhost:2023',
+  contest_id:222,
+  category_id:4
+)
+
+
+
+
+
+Challenge.create(
+  id:31,
+  title:'test chal 2',
+  description:'this is a challenge answer is qwe123',
+  point_value: 30,
+  hint: 'qwer1234',
+  link: 'google.com',
+  connection_string: 'keiferwiseman@localhost:2023',
+  contest_id:222,
+  category_id:2
+)
+Challenge.create(
+  id:32,
+  title:'test chal 2',
+  description:'this is a challenge answer is qwe123',
+  point_value: 30,
+  hint: 'qwer1234',
+  link: 'google.com',
+  connection_string: 'keiferwiseman@localhost:2023',
+  contest_id:222,
+  category_id:2
+)
+Challenge.create(
+  id:33,
+  title:'test chal 2',
+  description:'this is a challenge answer is qwe123',
+  point_value: 30,
+  hint: 'qwer1234',
+  link: 'google.com',
+  connection_string: 'keiferwiseman@localhost:2023',
+  contest_id:222,
+  category_id:2
+)
+Challenge.create(
+  id:34,
+  title:'test chal 2',
+  description:'this is a challenge answer is qwe123',
+  point_value: 30,
+  hint: 'qwer1234',
+  link: 'google.com',
+  connection_string: 'keiferwiseman@localhost:2023',
+  contest_id:222,
+  category_id:2
+)
+Challenge.create(
+  id:40,
+  title:'test chal 2',
+  description:'this is a challenge answer is qwe123',
+  point_value: 30,
+  hint: 'qwer1234',
+  link: 'google.com',
+  connection_string: 'keiferwiseman@localhost:2023',
+  contest_id:222,
+  category_id:1
+)
+Challenge.create(
+  id:41,
+  title:'test chal 2',
+  description:'this is a challenge answer is qwe123',
+  point_value: 30,
+  hint: 'qwer1234',
+  link: 'google.com',
+  connection_string: 'keiferwiseman@localhost:2023',
+  contest_id:222,
+  category_id:1
+)
+Challenge.create(
+  id:42,
+  title:'test chal 2',
+  description:'this is a challenge answer is qwe123',
+  point_value: 30,
+  hint: 'qwer1234',
+  link: 'google.com',
+  connection_string: 'keiferwiseman@localhost:2023',
+  contest_id:222,
+  category_id:3
+)
+Challenge.create(
+  id:43,
+  title:'test chal 2',
+  description:'this is a challenge answer is qwe123',
+  point_value: 30,
+  hint: 'qwer1234',
+  link: 'google.com',
+  connection_string: 'keiferwiseman@localhost:2023',
+  contest_id:222,
+  category_id:5
+)
+Challenge.create(
+  id:44,
+  title:'test chal 2',
+  description:'this is a challenge answer is qwe123',
+  point_value: 30,
+  hint: 'qwer1234',
+  link: 'google.com',
+  connection_string: 'keiferwiseman@localhost:2023',
+  contest_id:222,
+  category_id:5
+)
+Challenge.create(
+  id:45,
+  title:'test chal 2',
+  description:'this is a challenge answer is qwe123',
+  point_value: 30,
+  hint: 'qwer1234',
+  link: 'google.com',
+  connection_string: 'keiferwiseman@localhost:2023',
+  contest_id:222,
+  category_id:5
+)
+Challenge.create(
+  id:46,
+  title:'test chal 2',
+  description:'this is a challenge answer is qwe123',
+  point_value: 30,
+  hint: 'qwer1234',
+  link: 'google.com',
+  connection_string: 'keiferwiseman@localhost:2023',
+  contest_id:222,
+  category_id:5
+)
+Challenge.create(
+  id:47,
+  title:'test chal 2',
+  description:'this is a challenge answer is qwe123',
+  point_value: 30,
+  hint: 'qwer1234',
+  link: 'google.com',
+  connection_string: 'keiferwiseman@localhost:2023',
+  contest_id:222,
+  category_id:5
+)
+Challenge.create(
+  id:50,
+  title:'test chal 2',
+  description:'this is a challenge answer is qwe123',
+  point_value: 30,
+  hint: 'qwer1234',
+  link: 'google.com',
+  connection_string: 'keiferwiseman@localhost:2023',
+  contest_id:222,
+  category_id:4
+)
+Challenge.create(
+  id:51,
+  title:'test chal 2',
+  description:'this is a challenge answer is qwe123',
+  point_value: 30,
+  hint: 'qwer1234',
+  link: 'google.com',
+  connection_string: 'keiferwiseman@localhost:2023',
+  contest_id:222,
+  category_id:4
+)
+Challenge.create(
+  id:52,
+  title:'test chal 2',
+  description:'this is a challenge answer is qwe123',
+  point_value: 30,
+  hint: 'qwer1234',
+  link: 'google.com',
+  connection_string: 'keiferwiseman@localhost:2023',
+  contest_id:222,
+  category_id:4
+)
+Challenge.create(
+  id:53,
+  title:'test chal 2',
+  description:'this is a challenge answer is qwe123',
+  point_value: 30,
+  hint: 'qwer1234',
+  link: 'google.com',
+  connection_string: 'keiferwiseman@localhost:2023',
+  contest_id:222,
+  category_id:4
+)
+Challenge.create(
+  id:54,
+  title:'test chal 2',
+  description:'this is a challenge answer is qwe123',
+  point_value: 30,
+  hint: 'qwer1234',
+  link: 'google.com',
+  connection_string: 'keiferwiseman@localhost:2023',
+  contest_id:222,
+  category_id:4
+)
+Challenge.create(
+  id:55,
+  title:'test chal 2',
+  description:'this is a challenge answer is qwe123',
+  point_value: 30,
+  hint: 'qwer1234',
+  link: 'google.com',
+  connection_string: 'keiferwiseman@localhost:2023',
+  contest_id:222,
+  category_id:4
+)
+Challenge.create(
+  id:56,
+  title:'test chal 2',
+  description:'this is a challenge answer is qwe123',
+  point_value: 30,
+  hint: 'qwer1234',
+  link: 'google.com',
+  connection_string: 'keiferwiseman@localhost:2023',
+  contest_id:222,
+  category_id:4
+)
+Challenge.create(
+  id:57,
+  title:'test chal 2',
+  description:'this is a challenge answer is qwe123',
+  point_value: 30,
+  hint: 'qwer1234',
+  link: 'google.com',
+  connection_string: 'keiferwiseman@localhost:2023',
+  contest_id:222,
+  category_id:4
+)
