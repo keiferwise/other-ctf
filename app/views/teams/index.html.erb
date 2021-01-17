@@ -1,15 +1,18 @@
 <div class="page-content">
   <div class="table-cntr">
-    <div class="th-left-cap"></div>
-      <div class="tab">
+      <div class="tab-full-page">
         <div class="tab-head">
-          <div class="tab-cell">#</div >
-          <div class="tab-cell" style="min-width:250px">Name </div>
-          <div class="tab-cell">Score</div>
+          <div class="th-left-cap"></div>
+          <div class="tab-head-cell">#</div >
+          <div class="tab-head-cell" style="min-width:250px">Name </div>
+          <div class="tab-head-cell">Score</div>
+          <div class="th-right-cap"></div>
+          
         </div>
         <% @index = 0 %>
         <% @teams.each do |team| %>
         <div class="tab-row">
+          <div class="tab-cell"></div>
           <div class="tab-cell"><%= @index+=1 %></div>
           <div class="tab-cell"><%= team.title %></div>
           <div class="tab-cell"><%= team.score %></div>

@@ -75,6 +75,21 @@ th{
   border-radius: 50% 0% 0% 50%;
   background-color: #7788ff;
   border-right: 2px solid black;
+  display:table-cell;
+}
+.th-right-cap{
+  height: 50px;
+  width:40px;
+  border-radius: 0% 50% 50% 0%;
+  background-color: #7788ff;
+  border-left: 2px solid black;
+  display:table-cell;
+}
+.table-dot{
+  height:12px;
+  width:26px;
+  border-radius: 50%;
+  background-color: #7788ff;
 }
 td{
   @include font-header;
@@ -82,16 +97,18 @@ td{
   //height:25px;
   //padding:15px 75px 15px 45px;
 }
-.tab{
+@mixin tab{
   display:table;
+}
+.tab-full-page{
+  @include tab;
+  width:900px;
 }
 .tab-head{
   display:table-row;
-  background-color: #7788ff;
   font-weight: bold;
   height:50px;
   color:black;
-
 }
 .tab-row{
   display: table-row;
@@ -103,7 +120,13 @@ td{
   border-right: 2px solid black;
   border-left: 2px solid black;
 }
-
+.tab-head-cell{
+  display:table-cell;
+  padding:10px;
+  background-color: #7788ff;
+  border-right: 2px solid black;
+  border-left: 2px solid black;
+}
 .white-text{
   color:white;
 }

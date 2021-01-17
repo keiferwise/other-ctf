@@ -55,13 +55,61 @@ Person.create(
 Team.create(
   id: 45,
   title: 'FunBoys',
-  score: 0,
+  score: 0011,
   contest_id:222
 )
 Team.create(
   id: 46,
-  title: 'SadBoys',
-  score: 0,
+  title: 'cool team',
+  score: 80,
+  contest_id:222
+)
+Team.create(
+  id: 47,
+  title: 'gods own',
+  score: 70,
+  contest_id:222
+)
+Team.create(
+  id: 48,
+  title: 'super people',
+  score: 50,
+  contest_id:222
+)
+Team.create(
+  id: 49,
+  title: 'rumple',
+  score: 40,
+  contest_id:222
+)
+Team.create(
+  id: 50,
+  title: 'feedbag',
+  score: 40,
+  contest_id:222
+)
+Team.create(
+  id: 51,
+  title: 'bitboys',
+  score: 30,
+  contest_id:222
+)
+Team.create(
+  id: 52,
+  title: 'byteboys',
+  score: 3000,
+  contest_id:222
+)
+Team.create(
+  id: 53,
+  title: 'The team',
+  score: 220,
+  contest_id:222
+)
+Team.create(
+  id: 54,
+  title: 'my_Great_team',
+  score: 10,
   contest_id:222
 )
 Challenge.create(
