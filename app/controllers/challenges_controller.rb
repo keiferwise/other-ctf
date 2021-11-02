@@ -5,6 +5,23 @@ class ChallengesController < ApplicationController
     require_user
     @categories = Category.all
     @challenges = Challenge.all
+    @chal_count = Challenge.count
+    @chals_unsorted = Challenge.all
+    @chal_col_1 = []
+    @chal_col_2 = []
+    @chal_counts = [0,0,0,0,0,0]
+    print(@chal_counts[0])      
+    @i=0
+    #@chals_unsorted.each do |chal|
+     # @categories.each do |cat|
+      #  if chal.category_id == cat.id
+       #   @chal_counts[@i] = @chal_counts[@i]+1
+          
+        #end
+      #end
+      #@i=@i+1
+    #end
+    print(@chal_counts)      
   end
   #
   def show
@@ -118,7 +135,7 @@ class ChallengesController < ApplicationController
     require_participant
     team = Team.find(current_user.team_id)
     @challenge = Challenge.find(params[:id])
-    # check if the team already got the hint
+    # check i-f the team already got the hint
     hint = Hint.find_by(challenge_id: @challenge.id, team_id: team.id)
     solve = Solve.find_by(challenge_id: @challenge.id, team_id: team.id)
     if hint == nil && solve == nil
@@ -128,10 +145,10 @@ class ChallengesController < ApplicationController
     end
     
 
-      #if they have, redirect to challenge page (could be caused by two team memeber pressing around the same time)
-    # check if the challenge is solved
+      #i f they have, redirect to challenge page (could be caused by two team memeber pressing around the same time)
+    # check i-f the challenge is solved
       # redirect back to challenge
-    # If these two are passed
+    # I f these two are passed
       # create hint entry
       # redirect back with hint now revealed
       redirect_to @challenge
@@ -141,4 +158,5 @@ class ChallengesController < ApplicationController
   def challenge_params
     params.require(:challenge).permit(:title, :description,:point_value,:hint,:link,:connection_string)
   end
+
 end
